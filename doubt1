@@ -1,0 +1,43 @@
+let arr=[];
+let MovieArray = [
+    ['Ayan','PG13'],
+    ['kabali', 'PG'],
+    ['Got', 'PG'],
+    ['Sacred Games', 'PG13'],
+    ['Mirzapur', 'PG']
+];
+
+
+class Movie  {
+    constructor(title,studio,rating="PG")
+    {
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+    
+    }
+    
+  getPG(movies)
+  {
+      
+      for(i=0;i<movies.length;i++)
+{
+      innerLoopElement=movies[i].length;
+      for(j=0;j<innerLoopElement;j++)
+    {
+        if(movies[i][j]=="PG13")
+        {
+          arr.push(movies[i][0]) ;
+        }
+    }
+}
+      return arr;
+  }
+    
+}
+
+let instance=new Movie("Casino Royale","Eon Production","PG13");
+// console.log(instance);
+console.log(instance.getPG(MovieArray));
+
+
